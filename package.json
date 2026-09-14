@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "test": "node --test test/*.test.js",
-    "build:deb": "electron-builder --linux deb"
+    "build:deb": "electron-builder --linux deb -c.publish=never"
   },
   "repository": {
     "type": "git",
@@ -60,6 +60,7 @@
         "libnotify4",
         "libappindicator3-1 | libayatana-appindicator3-1"
       ]
-    }
+    },
+    "publish": null
   }
 }
