@@ -1,0 +1,62 @@
+{
+  "name": "whatsapp-linux-lite",
+  "version": "1.0.0",
+  "description": "Ultra-lightweight WhatsApp Desktop client for Linux",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.js",
+    "build:deb": "electron-builder --linux deb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hossaindev/whatsapp-linux-lite.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "linux",
+    "desktop",
+    "electron",
+    "lightweight",
+    "ram-saver"
+  ],
+  "author": "MD Ahmed",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "dbus-next": "^0.10.2"
+  },
+  "build": {
+    "appId": "com.hossaindev.whatsapplite",
+    "productName": "WhatsApp Lite",
+    "desktopName": "whatsapp-lite.desktop",
+    "compression": "maximum",
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "!test/**/*"
+    ],
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Network;Chat;InstantMessaging;",
+      "icon": "assets/icons",
+      "desktop": {
+        "entry": {
+          "StartupWMClass": "whatsapp-lite"
+        }
+      }
+    },
+    "deb": {
+      "compression": "xz",
+      "depends": [
+        "libnotify4",
+        "libappindicator3-1 | libayatana-appindicator3-1"
+      ]
+    }
+  }
+}

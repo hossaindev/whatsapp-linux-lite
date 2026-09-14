@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp - No Connection</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a141b;
+      color: #e9edef;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap: 20px;
+    }
+    .icon {
+      width: 80px;
+      height: 80px;
+      opacity: 0.4;
+    }
+    h1 { font-size: 22px; font-weight: 600; color: #e9edef; }
+    p { font-size: 14px; color: #8696a0; text-align: center; max-width: 320px; line-height: 1.6; }
+    button {
+      margin-top: 8px;
+      background: #00a884;
+      color: #fff;
+      border: none;
+      border-radius: 24px;
+      padding: 12px 32px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover { background: #06cf9c; }
+  </style>
+</head>
+<body>
+  <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="10" stroke="#8696a0" stroke-width="1.5"/>
+    <path d="M8.5 8.5L15.5 15.5M15.5 8.5L8.5 15.5" stroke="#8696a0" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+  <h1>No Internet Connection</h1>
+  <p>WhatsApp requires an internet connection. Check your network and try again.</p>
+  <button onclick="location.href='https://web.whatsapp.com'">Try Again</button>
+</body>
+</html>
