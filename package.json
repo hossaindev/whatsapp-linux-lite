@@ -20,7 +20,7 @@
     "lightweight",
     "ram-saver"
   ],
-  "author": "MD Ahmed",
+  "author": "MD Ahmed <mdahmed117721@gmail.com>",
   "license": "MIT",
   "desktopName": "whatsapp-lite.desktop",
   "devDependencies": {
@@ -51,7 +51,8 @@
         "entry": {
           "StartupWMClass": "whatsapp-lite"
         }
-      }
+      },
+      "maintainer": "MD Ahmed <mdahmed117721@gmail.com>"
     },
     "deb": {
       "compression": "xz",
